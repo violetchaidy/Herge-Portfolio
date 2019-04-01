@@ -1,0 +1,595 @@
+
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Lilita One', cursive;
+	line-height: 1.6;
+	margin: 0;
+	height: 100%;
+	width: 100%;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+a {
+	text-decoration: none;
+}
+
+
+
+.logo {
+	margin: 40px 0px 10px 40px;
+	font-size: 2em;
+}
+
+.header > h1 {
+	text-transform: uppercase;
+	color:#020202;
+}
+
+
+
+.main-nav {
+	margin-bottom:20px;
+	display: flex;
+	justify-content: flex-end;
+
+}
+
+.main-nav a {
+	padding: 10px 15px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.main-nav a {
+	color:#020202;
+	font-size: 1em;
+}
+
+.main-nav a:hover {
+	color: #fee040;
+}
+
+
+@media only screen and (max-width: 812px) {
+	.header {
+	display: flex;
+	flex-wrap: wrap;
+	flex-grow: 1;
+	position: fixed;
+	flex-direction: row;
+	padding-top: .3em;
+	padding-bottom: .3em;
+	border: 1px solid #a2a2a2;
+	background-color: #FFFF;
+	-webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+}
+
+@media only screen and (min-width: 812px) {
+	.header {
+	
+	display: flex;
+	width: 100%;
+	flex-wrap: wrap;
+	flex-grow: 1;
+	position: fixed;
+	flex-direction: row;
+	padding-top: .3em;
+	padding-bottom: .3em;
+	border: 1px solid #a2a2a2;
+	background-color: #FFFF;
+	-webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+	.logo {
+	margin: 40px 800px 10px 40px;
+	font-size: 2em;
+}
+	
+	.main-nav a {
+	color:#020202;
+	font-size: 1.2em;
+}
+
+}
+
+/* HOME */
+
+.container {
+	display: block;
+	background-color: #fee040;
+	height: 640px;
+}
+
+.container > div > img {
+	padding-top: 270px;
+	width: 40%;
+	height: 40%;
+}
+
+.box {
+width:80%;
+min-height:80vh;
+margin:auto;
+display: flex;
+justify-content: center;
+align-content: center;
+}
+
+/* about */
+
+.intro {
+	display: flex;
+	background-color: #fee040;
+	margin-top: -120px;
+	text-transform: uppercase;
+}
+
+@media only screen and (max-width: 812px) {
+	.intro > h1 {
+	font-family: 'Unica One', cursive;
+	text-align: center;
+	align-items: center;
+  	justify-content: center;
+	margin: 50px;
+	}
+} 
+
+@media only screen and (min-width: 812px) {
+	.intro > h1 {
+	font-family: 'Unica One', cursive;
+	text-align: center;
+	margin-left: 120px;
+	margin-top: 170px;
+	margin-bottom: 100px;
+	}
+} 
+
+/* GALLERY */
+
+body {
+	min-height: 100vh;
+	background-color: #fafafa;
+}
+
+.container {
+	display: block;
+	max-width: 100rem;
+	margin: auto;
+}
+
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	/* Compensate for excess margin on outer gallery flex items */
+}
+
+.gallery-item {
+	/* Minimum width of 24rem and grow to fit available space */
+	flex: 0 0 15rem;
+	/* Margin value should be half of grid-gap value as margins on flex items don't collapse */
+	margin: 0rem;
+	box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+	overflow: hidden;
+}
+
+.gallery-image {
+	display: flex;
+	width: 40%;
+	height: 40%;
+	transition: transform 400ms ease-out;
+}
+
+.gallery-image:hover {
+	transform: scale(1.10);
+}
+
+.gallery-item > h3 {
+	font-size: 40px;
+	text-align: right;
+	color: #000000;
+	padding-right: 40px;
+	padding-bottom: 20px;
+}
+/*
+
+The following rule will only run if your browser supports CSS grid.
+
+Remove or comment-out the code block below to see how the browser will fall-back to flexbox styling. 
+
+*/
+
+@supports (display: grid) {
+	.gallery {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+	}
+
+	.gallery,
+	.gallery-item {
+		margin: 0;
+	}
+}
+ 
+ /* TIMELINE */
+
+.timeline {
+	display: block;
+	background-color: #fee040;
+	text-align: center;
+	justify-content: center;
+}
+
+
+.timeline > h1 {
+	font-family: 'Unica One', cursive;
+	font-size: 27px;
+}
+
+@media only screen and (min-width: 1000px) {
+	.timeline > p {
+	font-family: 'Unica One', cursive;
+	font-size: 22px;
+	margin: 10px;
+	}
+
+	.timeline h2 {
+	margin-top: 400px;
+	font-family: 'Lilita One', cursive; 
+	font-size: 27px;
+	color: :black;
+
+	}
+
+}
+
+/* MOBILE SIZE */
+
+@media only screen and (max-width: 812px) {
+	.timeline > p {
+		font-size: 15px;
+		font-family: 'Unica One', cursive;
+	}
+
+	.timeline h2 {
+	margin-top: 1800px;
+	font-family: 'Lilita One', cursive; 
+	font-size: 27px;
+	color: :black;
+
+	}
+}
+
+
+
+
+.intro > h1 {
+	font-size: 30px;
+}
+
+/* BUTTON */
+
+
+$lato: 'Lato', sans-serif;
+
+//color
+$yellow: #FFD300; 
+$white: #f2f1f1;
+$black: #000000;
+$black-light: #5E5E5E;
+
+//font weights:
+$thin: 300;
+$normal: 400;
+$bold: 900;
+
+
+/*==================================== 
+  Some styles to spruce up the demo
+=====================================*/ 
+
+
+
+
+/*==================================== 
+  Our Modal Window styles
+=====================================*/
+@media (min-width: 43.75em) {
+  .modal {
+    padding: 1.5em;
+  }
+}
+.modal > label {
+  background: #FFD300;
+  border: 1px solid #f0c600;
+  border-radius: .2em;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.75em 3em;
+  transition: all 0.55s;
+}
+.modal > label:hover {
+  transform: scale(0.97);
+}
+.modal__overlay {
+  background: #000000;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  text-shadow: none;
+  top: 0;
+  z-index: 600;
+}
+
+
+.modal__wrap {
+  padding: 1em 0;
+  position: relative;
+  margin: 0 auto;
+  max-width: 500px;
+  width: 90%;
+}
+@media (min-width: 50em) {
+  .modal__wrap {
+    padding: 1.75em;
+  }
+}
+@media (min-height: 37.5em) {
+  .modal__wrap {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -80%);
+  }
+}
+.modal__wrap label {
+  background: #FFD300;
+  border-radius: 50%;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  height: 1.5em;
+  line-height: 1.5;
+  position: absolute;
+  right: .5em;
+  top: .5em;
+  width: 1.5em;
+}
+.modal__wrap h2 {
+  color: #FFD300;
+  margin-bottom: 1em;
+  text-transform: uppercase;
+}
+.modal__wrap p {
+  color: #FFD300;
+  text-align: justify;
+}
+.modal input:focus ~ label {
+  transform: scale(0.97);
+}
+
+.modal input {
+  position: absolute;
+  top: -1000px;
+}
+
+.modal__overlay {
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  z-index: -100;
+}
+
+
+input:checked ~ .modal__overlay {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 800;
+}
+
+
+/* Tintin modal */
+.modal__overlay2 {
+  background: #000000;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  text-shadow: none;
+  top: 0;
+  z-index: 600;
+}
+
+.modal__overlay2 {
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  z-index: -100;
+}
+
+input:checked ~ .modal__overlay2 {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 800;
+}
+ 
+/* Flup, Nenesse Modal */
+
+.modal__overlay5 {
+  background: #000000;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  text-shadow: none;
+  top: 0;
+  z-index: 600;
+}
+
+.modal__overlay5 {
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  z-index: -100;
+}
+
+input:checked ~ .modal__overlay5 {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 800;
+}
+
+
+
+/* Le Sifflet Modal */
+
+.modal__overlay3 {
+  background: #000000;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  text-shadow: none;
+  top: 0;
+  z-index: 600;
+}
+
+.modal__overlay3 {
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  z-index: -100;
+}
+
+input:checked ~ .modal__overlay3 {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 800;
+}
+
+/* Le Sifflet Modal */
+
+.modal__overlay4 {
+  background: #000000;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  text-shadow: none;
+  top: 0;
+  z-index: 600;
+}
+
+.modal__overlay4 {
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  z-index: -100;
+}
+
+input:checked ~ .modal__overlay4 {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 800;
+}
+
+/* Antoine en Antoinette */
+
+.modal__overlay6 {
+  background: #000000;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  text-shadow: none;
+  top: 0;
+  z-index: 600;
+}
+
+.modal__overlay6 {
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  z-index: -100;
+}
+
+input:checked ~ .modal__overlay6 {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 800;
+}
+
+/* Contact Form */
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+body { background:rgba(249,159,161,1.00); }
+
+form { 
+	max-width:420px; 
+	margin:40px auto;
+	display: block;}
+
+.feedback-input {
+  color:black;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight:500;
+  font-size: 18px;
+  line-height: 22px;
+  background-color: white;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width:100%;
+  box-sizing: border-box;
+  outline:0;
+}
+
+.feedback-input:focus { border:2px solid #CC4949; }
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize:vertical;
+}
+
+[type="submit"] {
+  font-family: 'Lilita One', cursive;
+  width: 100%;
+  background-color: #15D4F6;
+  border-radius:5px;
+  border:0;
+  cursor:pointer;
+  color:white;
+  font-size:24px;
+  padding-top:10px;
+  padding-bottom:10px;
+  transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
+}
+[type="submit"]:hover { background-color: black; }
